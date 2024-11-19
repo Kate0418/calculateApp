@@ -1,0 +1,73 @@
+<!doctype html>
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            width: 500px;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #68779a;
+            background: #cbe8fa;
+            cursor: pointer;
+            font-size: 50px;
+        }
+        a {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 75px;
+        }
+        .img0 {
+            width: 1%;
+        }
+        .img1 {
+            width: 75%;
+        }
+        p {
+            font-size: 75px;
+            text-align: center;
+        }
+        @media screen and (min-width: 1280px) {
+            .img1 {
+                width: 30%;
+            }
+            p {
+                font-size: 40px;
+            }
+            a {
+                font-size: 50px;
+            }
+            button {
+                width: 250px;
+                height: 50px;
+                padding: 5px;
+                font-size: 20px;
+            }
+            body {
+                padding-top: 0px;
+            }
+        }
+    </style>
+    <body>
+        <p>因数分解サイト</p>
+        <h1><img class="img1" src="{% static 'kate/注意書き.gif' %}" /></h1>
+        <form action="{% url 'kate:ww' %}">
+            <h1>{{form}}</h1>
+            <h1><button type="submit">O&nbsp;K</button></h1>
+        </form>
+        <h1>結果：{{ans}}</h1>
+        <h1>
+            <a style="text-decoration: none" href="{% url 'kate:qq' %}">🔙</a>
+        </h1>
+    </body>
+</html>

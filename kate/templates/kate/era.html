@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="ja" />
+        <style>
+            h1 {
+                text-align: center;
+                font-size: 50px;
+            }
+            body {
+                padding-top: 50px;
+            }
+            button {
+                width: 300px;
+                height: 100px;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #68779a;
+                background: #cbe8fa;
+                cursor: pointer;
+                font-size: 50px;
+            }
+            p {
+                font-size: 75px;
+                text-align: center;
+            }
+            @media screen and (min-width: 1280px) {
+                .img1 {
+                    width: 30%;
+                }
+                p {
+                    font-size: 40px;
+                }
+                a {
+                    font-size: 50px;
+                }
+                button {
+                    width: 250px;
+                    height: 50px;
+                    padding: 5px;
+                    font-size: 20px;
+                }
+                body {
+                    padding-top: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>正しい入力値を設定してください</h1>
+        <p><button onclick="goBack()">戻る</button></p>
+        <script>
+            function goBack() {
+                // 戻りたい処理をここに追加
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>

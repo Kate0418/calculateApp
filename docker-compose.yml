@@ -1,0 +1,7 @@
+services:
+  back:
+    build: ./
+    ports:
+      - 8001:8000
+    volumes:
+      - .:/calculateApp
